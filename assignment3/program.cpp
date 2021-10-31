@@ -14,7 +14,8 @@ int main (int count, char* previous_move[])
   	
   	ofstream fout("mymoves.dat",ios::app);
   	
-  	
+	fin.open();
+	fout.open();
   	
 	
 	if(string(previous_move[2]) == "zero")
