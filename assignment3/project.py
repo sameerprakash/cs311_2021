@@ -15,5 +15,6 @@ elif(args.last_opponent_move == "zero"):
   print(moves.pop())
 else:
   moves.append(args.last_opponent_move)
-  moves.pop()
-json.dump(moves,mymoves)
+  print(moves.pop())
+with open("mymoves.json","w') as of:
+  json.dump(moves,mymoves)
