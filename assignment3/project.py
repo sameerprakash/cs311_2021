@@ -6,15 +6,16 @@ parser.add_argument('--iterations', help='number of iterations in game')
 parser.add_argument('--last_opponent_move', help='last opponent move')
 
 args = parser.parse_args()
-mymoves = open("mymoves.json")
-moves = json.load(mymoves)
+movefile = open("mymoves.json")
+moves = json.load(movefile)
 
 if(args.init == "true"):
-  moves = ["silent", "confess"]
+  moves = ["silence", "confess"]
 elif(args.last_opponent_move == "zero"):
   print(moves.pop())
+  moves.append("silence")
 else:
   moves.append(args.last_opponent_move)
   print(moves.pop())
-with open("mymoves.json","w') as of:
-  json.dump(moves, of)
+with open("mymoves.json", "w") as output:
+  json.dump(moves, output)
