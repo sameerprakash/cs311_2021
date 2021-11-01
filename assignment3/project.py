@@ -10,7 +10,7 @@ mymoves = open("mymoves.json")
 moves = json.load(mymoves)
 
 if(args.init == "true"):
-  moves = ["silent"]
+  moves = ["silent", "confess"]
 elif(args.last_opponent_move == "zero"):
   print(moves.pop())
 else:
