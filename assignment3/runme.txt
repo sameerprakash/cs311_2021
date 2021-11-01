@@ -1,1 +1,1 @@
-project.cpp
+python project.py
