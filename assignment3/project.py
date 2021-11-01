@@ -17,4 +17,4 @@ else:
   moves.append(args.last_opponent_move)
   print(moves.pop())
 with open("mymoves.json","w') as of:
-  json.dump(moves,mymoves)
+  json.dump(moves, of)
